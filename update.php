@@ -15,7 +15,7 @@ $data = mysqli_fetch_array($hasil);
     <title>Update</title>
 </head>
 <body>
-    <form action="updateb.php" method="GET">
+    <form action="updateb.php" method="POST">
         <table>
             <tr>
                 <input type="hidden" name="ID" value="<?php echo $data['ID']; ?>">

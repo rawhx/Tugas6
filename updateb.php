@@ -1,10 +1,10 @@
 <?php
 include "koneksi.php";
-$id = $_GET['ID'];
-@$nama = $_GET['nama'];
-@$kelamin = $_GET['kelamin'];
-@$alamat = $_GET['alamat'];
-@$submit = $_GET['submit'];
+$id = $_POST['ID'];
+@$nama = $_POST['nama'];
+@$kelamin = $_POST['kelamin'];
+@$alamat = $_POST['alamat'];
+@$submit = $_POST['submit'];
 @$hasil = "UPDATE tabel_siswa SET Nama = '$nama', Jenis_Kelamin = '$kelamin', Alamat = '$alamat' WHERE ID=$id";
 if ($submit) {
     $simpan = mysqli_query($mysqli, $hasil);
