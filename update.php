@@ -16,7 +16,8 @@ $data = mysqli_fetch_array($hasil);
 </head>
 <body>
     <form action="updateb.php" method="POST">
-        <table>
+        <h2 style="text-align: center;">Tambahkan Siswa</h2>
+        <table align="center">
             <tr>
                 <input type="hidden" name="ID" value="<?php echo $data['ID']; ?>">
             </tr>

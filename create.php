@@ -8,7 +8,8 @@
 </head>
 <body>
 <form action="createb.php" method="post">
-        <table>
+    <h2 style="text-align: center;">Tambahkan Siswa</h2>
+        <table align="center">
             <tr>
                 <td>Nama</td>
                 <td>:</td>
