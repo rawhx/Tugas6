@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseName = 'sekolah';
+$databaseName = 'sekawan';
 $databaseUsername = 'root';
 $databasePassword = '';
  

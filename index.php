@@ -28,34 +28,32 @@ $hasil = mysqli_query($mysqli, $table);
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Alamat</th>
+            <th>No Telepon</th>
             <th colspan="2">Aksi</th>
         </tr>
-         <?php
-        while ($data = mysqli_fetch_array($hasil)) {
-        ?> 
-        <tr>
-            <td><?= $data['ID']?></td>
-            <td><?= $data['Nama']?></td>
-            <td>
-                <?php 
-                    if ($data['Jenis_Kelamin'] == 0) {
-                        echo "Laki-laki";
-                    } else {
-                        echo "Perempuan";
-                    }
-                ?>
-            </td>
-            <td><?= $data['Alamat']?></td>
-            <td>
-                <a href="update.php?id=<?=$data['ID']?>">Update</a>
-            </td>
-            <td>
-                <a href="destroy.php?id=<?=$data['ID']?>" style="color: red;" onclick="return confirm('Data akan hilang, apakah anda yakin ?')" style="color: red;">Hapus</a>
-            </td>
-        </tr>
-        <?php 
-        }
-        ?>
+        <?php while ($data = mysqli_fetch_array($hasil)) { ?> 
+            <tr>
+                <td><?= $data['ID']?></td>
+                <td><?= $data['Nama']?></td>
+                <td>
+                    <?php 
+                        if ($data['Jenis_Kelamin'] == 0) {
+                            echo "Laki-laki";
+                        } else {
+                            echo "Perempuan";
+                        }
+                    ?>
+                </td>
+                <td><?= $data['Alamat']?></td>
+                <td><?= $data['no_telepon']?></td>
+                <td>
+                    <a href="update.php?id=<?=$data['ID']?>">Update</a>
+                </td>
+                <td>
+                    <a href="destroy.php?id=<?=$data['ID']?>" style="color: red;" onclick="return confirm('Data akan hilang, apakah anda yakin ?')" style="color: red;">Hapus</a>
+                </td>
+            </tr>
+        <?php } ?>
     </table>
 </body>
 </html>

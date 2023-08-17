@@ -1,8 +1,8 @@
 <?php
 include "koneksi.php";
 $id = $_GET['id'];
-$query = "DELETE FROM tabel_siswa WHERE ID = '$id'";
-$hasil = mysqli_query($mysqli, $query);
+$delete = "DELETE FROM tabel_siswa WHERE ID = '$id'";
+$hasil = mysqli_query($mysqli, $delete);
 if ($hasil) {
     header('Location: index.php');
 } else {

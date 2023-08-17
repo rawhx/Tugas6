@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2022 at 12:38 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Aug 17, 2023 at 02:04 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sekolah`
+-- Database: `sekawan`
 --
 
 -- --------------------------------------------------------
@@ -31,16 +31,9 @@ CREATE TABLE `tabel_siswa` (
   `ID` int(11) NOT NULL COMMENT 'ID siswa',
   `Nama` varchar(100) NOT NULL COMMENT 'Nama Siswa',
   `Jenis_Kelamin` tinyint(1) NOT NULL COMMENT '0:laki-laki\r\n1:perempuan',
-  `Alamat` text NOT NULL COMMENT 'alamat lengkap siswa\r\n'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tabel_siswa`
---
-
-INSERT INTO `tabel_siswa` (`ID`, `Nama`, `Jenis_Kelamin`, `Alamat`) VALUES
-(1, 'putra', 0, 'Jl. Danau toba no 33 RT 01 RW 03 Sawojajar Kedungkandang Malang'),
-(2, 'putri', 1, 'Jl. Danau Ranau no 77 RT 11 RW 07 Sawojajar Kedungkandang Malang');
+  `Alamat` text NOT NULL COMMENT 'alamat lengkap siswa\r\n',
+  `no_telepon` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -60,7 +53,7 @@ ALTER TABLE `tabel_siswa`
 -- AUTO_INCREMENT for table `tabel_siswa`
 --
 ALTER TABLE `tabel_siswa`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID siswa', AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID siswa';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

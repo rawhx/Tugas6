@@ -29,6 +29,11 @@
                 <td><textarea name="alamat"cols="30" rows="10" required></textarea></td>
             </tr>
             <tr>
+                <td>No Telepon</td>
+                <td>:</td>
+                <td><input type="number" name="no_telepon" id=""></textarea></td>
+            </tr>
+            <tr>
                 <td colspan="3" style="text-align: right;">
                     <input type="submit" name="submit" value="create">
                 </td>

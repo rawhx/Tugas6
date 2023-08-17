@@ -47,6 +47,11 @@ $data = mysqli_fetch_array($hasil);
                 <td><textarea name="alamat" cols="30" rows="10"><?= $data['Alamat']?></textarea></td>
             </tr>
             <tr>
+                <td>no telepon</td>
+                <td>:</td>
+                <td><input type="number" name="no_telepon" id="" value="<?= $data['no_telepon']?>"></td>
+            </tr>
+            <tr>
                 <td colspan="3" style="text-align: right;">
                     <input type="submit" value="perbarui" name="submit">
                 </td>
