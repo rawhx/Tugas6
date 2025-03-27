@@ -1,9 +1,9 @@
 <?php
-include('koneksi.php');
-$id = $_GET['id'];
-$table = "SELECT * FROM tabel_siswa WHERE ID = '$id'";
-$hasil = mysqli_query($mysqli, $table);
-$data = mysqli_fetch_array($hasil);
+    include('koneksi.php');
+    $id = $_GET['id'];
+    $table = "SELECT * FROM tabel_siswa WHERE ID = '$id'";
+    $hasil = mysqli_query($mysqli, $table);
+    $data = mysqli_fetch_array($hasil);
 ?>
 
 <!DOCTYPE html>
